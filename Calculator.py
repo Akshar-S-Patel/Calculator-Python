@@ -179,9 +179,12 @@ def showHistory():
     """
     history = Tk()
     history.title("History")
-    history.geometry("200x200")
-    historyList = Listbox(history, width=20000)
+    history.geometry("250x250")
+    scrollbar = Scrollbar(history)
+    scrollbar.pack(side=RIGHT, fill=Y)
+    historyList = Listbox(history, width=20000, yscrollcommand=scrollbar.set)
     historyList.pack(side=LEFT, fill=Y)
+    scrollbar.config(command=historyList.yview)
     for index, element in enumerate(standard_history):
         historyList.insert(END, f"({str(index+1)}) {element}")
 
