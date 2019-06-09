@@ -13,7 +13,7 @@ isOperatorEquals = False  # True on press equals or else false
 calc = Tk()  # InIt graphical window
 calc.title("Calculator")  # Set title as calculator
 calc.geometry("300x400")  # Set the size of calculator
-calc.wm_maxsize(300, 400)  # Set max possible size of window
+# calc.wm_maxsize(300, 400)  # Set max possible size of window
 calc.wm_minsize(300, 400)  # Set min possible size of window
 # All Basic foe graphical window are set
 
@@ -267,6 +267,7 @@ Button(standardRow6, width=3, height=1, text="=", font=("Comic Sans MS", 15), bg
 statusBar = Frame(calc, bg="lightblue", height=25)
 statusBar.pack(side=BOTTOM, fill=X)
 Button(statusBar, text="About", bg="lightpink", font=("Comic Sans MS", 8), command=selfInfo).pack(side=LEFT, padx=5)
+Button(statusBar, text="Resize", bg="lightpink", font=("Comic Sans MS", 8), command=lambda: calc.geometry("300x400")).pack(side=RIGHT, padx=5)
 
 
 calc.mainloop()
