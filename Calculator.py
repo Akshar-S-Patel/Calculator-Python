@@ -12,9 +12,9 @@ isOperatorEquals = False  # True on press equals or else false
 # InIt graphics window
 calc = Tk()  # InIt graphical window
 calc.title("Calculator")  # Set title as calculator
-calc.geometry("300x400")  # Set the size of calculator
+calc.geometry("300x470")  # Set the size of calculator
 # calc.wm_maxsize(300, 400)  # Set max possible size of window
-calc.wm_minsize(300, 400)  # Set min possible size of window
+calc.wm_minsize(300, 470)  # Set min possible size of window
 # All Basic foe graphical window are set
 
 
@@ -222,52 +222,52 @@ standard_frame.pack(fill=X)
 # Create Buttons For Standard Calculator
 standardRow1 = Frame(standard_frame, bg="gray")
 standardRow1.pack()
-Button(standardRow1, width=3, height=1, text="%", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=1: onClickOperator(ope)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow1, width=3, height=1, text="\u221Ax", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=1: onClickOtherOperator(ope)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow1, width=3, height=1, text="x\u00b2", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=2: onClickOtherOperator(ope)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow1, width=3, height=1, text="1/x", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=3: onClickOtherOperator(ope)).pack(side=LEFT, padx=3, pady=3)
+Button(standardRow1, width=5, height=1, text="%", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=1: onClickOperator(ope)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow1, width=5, height=1, text="\u221Ax", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=1: onClickOtherOperator(ope)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow1, width=5, height=1, text="x\u00b2", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=2: onClickOtherOperator(ope)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow1, width=5, height=1, text="1/x", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=3: onClickOtherOperator(ope)).pack(side=LEFT, padx=1, pady=2)
 # row 2
 standardRow2 = Frame(standard_frame, bg="gray")
 standardRow2.pack()
-Button(standardRow2, width=3, height=1,  text="CE", font=("Comic Sans MS", 15), bg="#dfdfdf", command=onClickCE).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow2, width=3, height=1, text="C", font=("Comic Sans MS", 15), bg="#dfdfdf", command=onClickC).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow2, width=3, height=1, text="DEL", font=("Comic Sans MS", 15), bg="#dfdfdf", command=delVal).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow2, width=3, text="\u00F7", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=2: onClickOperator(ope)).pack(side=LEFT, padx=3, pady=3)
+Button(standardRow2, width=5, height=1,  text="CE", font=("Comic Sans MS", 15), bg="#dfdfdf", command=onClickCE).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow2, width=5, height=1, text="C", font=("Comic Sans MS", 15), bg="#dfdfdf", command=onClickC).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow2, width=5, height=1, text="DEL", font=("Comic Sans MS", 15), bg="#dfdfdf", command=delVal).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow2, width=5, text="\u00F7", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=2: onClickOperator(ope)).pack(side=LEFT, padx=1, pady=2)
 # row 3
 standardRow3 = Frame(standard_frame, bg="gray")
 standardRow3.pack()
-Button(standardRow3, width=3, height=1, text="7", font=("Comic Sans MS", 15), bg="white", command=lambda a=7: onClickNumbers(a)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow3, width=3, height=1, text="8", font=("Comic Sans MS", 15), bg="white", command=lambda a=8: onClickNumbers(a)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow3, width=3, height=1, text="9", font=("Comic Sans MS", 15), bg="white", command=lambda a=9: onClickNumbers(a)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow3, width=3, height=1, text="X", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=3: onClickOperator(ope)).pack(side=LEFT, padx=3, pady=3)
+Button(standardRow3, width=5, height=1, text="7", font=("Comic Sans MS", 15), bg="white", command=lambda a=7: onClickNumbers(a)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow3, width=5, height=1, text="8", font=("Comic Sans MS", 15), bg="white", command=lambda a=8: onClickNumbers(a)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow3, width=5, height=1, text="9", font=("Comic Sans MS", 15), bg="white", command=lambda a=9: onClickNumbers(a)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow3, width=5, height=1, text="X", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=3: onClickOperator(ope)).pack(side=LEFT, padx=1, pady=2)
 # row 4
 standardRow4 = Frame(standard_frame, bg="gray")
 standardRow4.pack()
-Button(standardRow4, width=3, height=1, text="4", font=("Comic Sans MS", 15), bg="white", command=lambda a=4: onClickNumbers(a)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow4, width=3, height=1, text="5", font=("Comic Sans MS", 15), bg="white", command=lambda a=5: onClickNumbers(a)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow4, width=3, height=1, text="6", font=("Comic Sans MS", 15), bg="white", command=lambda a=6: onClickNumbers(a)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow4, width=3, height=1, text="-", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=4: onClickOperator(ope)).pack(side=LEFT, padx=3, pady=3)
+Button(standardRow4, width=5, height=1, text="4", font=("Comic Sans MS", 15), bg="white", command=lambda a=4: onClickNumbers(a)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow4, width=5, height=1, text="5", font=("Comic Sans MS", 15), bg="white", command=lambda a=5: onClickNumbers(a)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow4, width=5, height=1, text="6", font=("Comic Sans MS", 15), bg="white", command=lambda a=6: onClickNumbers(a)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow4, width=5, height=1, text="-", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=4: onClickOperator(ope)).pack(side=LEFT, padx=1, pady=2)
 # row 5
 standardRow5 = Frame(standard_frame, bg="gray")
 standardRow5.pack()
-Button(standardRow5, width=3, height=1, text="1", font=("Comic Sans MS", 15), bg="white", command=lambda a=1: onClickNumbers(a)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow5, width=3, height=1, text="2", font=("Comic Sans MS", 15), bg="white", command=lambda a=2: onClickNumbers(a)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow5, width=3, height=1, text="3", font=("Comic Sans MS", 15), bg="white", command=lambda a=3: onClickNumbers(a)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow5, width=3, height=1, text="+", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=5: onClickOperator(ope)).pack(side=LEFT, padx=3, pady=3)
+Button(standardRow5, width=5, height=1, text="1", font=("Comic Sans MS", 15), bg="white", command=lambda a=1: onClickNumbers(a)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow5, width=5, height=1, text="2", font=("Comic Sans MS", 15), bg="white", command=lambda a=2: onClickNumbers(a)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow5, width=5, height=1, text="3", font=("Comic Sans MS", 15), bg="white", command=lambda a=3: onClickNumbers(a)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow5, width=5, height=1, text="+", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda ope=5: onClickOperator(ope)).pack(side=LEFT, padx=1, pady=2)
 # row 6
 standardRow6 = Frame(standard_frame, bg="gray")
 standardRow6.pack()
-Button(standardRow6, width=3, height=1, text="+/-", font=("Comic Sans MS", 15), bg="#dfdfdf", command=plusminus).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow6, width=3, height=1, text="0", font=("Comic Sans MS", 15), bg="white", command=lambda a=0: onClickNumbers(a)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow6, width=3, height=1, text=".", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda a=".": onClickNumbers(a)).pack(side=LEFT, padx=3, pady=3)
-Button(standardRow6, width=3, height=1, text="=", font=("Comic Sans MS", 15), bg="#dfdfdf", command=equals).pack(side=LEFT, padx=3, pady=3)
+Button(standardRow6, width=5, height=1, text="+/-", font=("Comic Sans MS", 15), bg="#dfdfdf", command=plusminus).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow6, width=5, height=1, text="0", font=("Comic Sans MS", 15), bg="white", command=lambda a=0: onClickNumbers(a)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow6, width=5, height=1, text=".", font=("Comic Sans MS", 15), bg="#dfdfdf", command=lambda a=".": onClickNumbers(a)).pack(side=LEFT, padx=1, pady=2)
+Button(standardRow6, width=5, height=1, text="=", font=("Comic Sans MS", 15), bg="#dfdfdf", command=equals).pack(side=LEFT, padx=1, pady=2)
 
 
 # Status Bar
 statusBar = Frame(calc, bg="lightblue", height=25)
 statusBar.pack(side=BOTTOM, fill=X)
 Button(statusBar, text="About", bg="lightpink", font=("Comic Sans MS", 8), command=selfInfo).pack(side=LEFT, padx=5)
-Button(statusBar, text="Resize", bg="lightpink", font=("Comic Sans MS", 8), command=lambda: calc.geometry("300x400")).pack(side=RIGHT, padx=5)
+Button(statusBar, text="Resize", bg="lightpink", font=("Comic Sans MS", 8), command=lambda: calc.geometry("300x470")).pack(side=RIGHT, padx=5)
 
 
 calc.mainloop()
